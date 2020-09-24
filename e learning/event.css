@@ -1,0 +1,85 @@
+div.heading{
+            color: black;
+            font-size: 20px;
+        }
+        .topnav {
+            overflow: hidden;
+           background-color: white;
+           position: fixed;
+           top: 0%;
+           width: 50%;
+       }
+       .topnav a {
+           float: left;
+           color: black;
+           text-align: center;
+           
+           padding: 14px 16px;
+           text-decoration: none;
+           font-size: 17px;
+       }
+
+       .topnav a:hover {
+           background-color: rgb(235, 227, 227);
+           color:  rgb(213, 9, 240);
+       }
+
+       .topnav a.active {
+        text-decoration: underline;
+        color: red;
+        text-decoration-color: rgb(37, 27, 185);
+       }
+        div.static{
+            position: static;
+            border-right:6px solid dodgerblue;
+            width: 600px;
+            
+            
+
+        }
+        div.static:hover{
+            background-color:dodgerblue;
+            color: white;
+            
+
+        }
+
+        div.static1{
+            position: static;
+            border-right:6px solid tomato;
+            width: 600px;
+            
+            
+
+        }
+        div.static1:hover{
+            background-color:tomato;
+            color: white;
+
+        }
+
+        div.static2{
+            position: static;
+            border-right:6px solid green;
+            width: 600px;
+        }
+        div.static2:hover{
+            background-color:mediumseagreen;
+            color: white;
+        }
+        div.static3{
+            position: static;
+            border-right:6px solid violet;
+            width: 600px;
+        }
+        div.static3:hover{
+            background-color:hsl(290,60%,70%);
+            color: white;
+
+        }
+        a.cse{
+            text-decoration: none;
+        }
+    body{
+        background-attachment: fixed;
+    }

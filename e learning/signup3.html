@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About srec</title>
+    <link rel="stylesheet" href="dept.css" />
+    
+</head>
+<body background="https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-021.jpg">
+    <div class="topnav">
+        <a  href="ex3.html">Home</a>
+        <a href="about3.html">About us</a>
+        <a class="active" href="signup3.html">signup</a>
+        <a href="contact.html" >Contact</a>
+        <a href="Modules.html" >Modules</a>
+              
+</div ><br></br>
+    <h1 style="text-align: center;">  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7kAF9X0g_vnxhfZyF1MdYP7Pwlyl4Sa9WQA&usqp=CAU" width="200" height="180" style="float: left;">E LEARNING PLATFORM ORGANAIZED BY LOVELY PROFESSIONAL UNIVERSITY
+    
+    <img src="https://img2.pngio.com/lyceum-of-the-philippines-university-wikipedia-lyceum-png-1200_1332.png" width="200" height="180" style="float: right">
+     </h1></div>
+    <h2 style="text-align: center;">An AUTONOMOUS Institution </h2>
+    <p style="text-align: center;">Approved by Jalandhar University, Chennai.</p>
+    <br></br><br></br>
+<body class="login ng-scope" ng-controller="LoginCtrl" ng-clock="" ng-show="showLoginScreen">
+     
+
+
+
+
+
+
+
+    <title>Learn! | Let's make amazing Learning</title>
+    <link rel="shortcut icon" href="/App/img/favicon.ico">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+    <script src="/bundles/jquery?v=IbYOA7XlQOVvZmLmqbkvaCJVwgyuv1E0Aj9yWMu7eaY1"></script>
+
+    <script src="/bundles/jqueryui?v=i4Scbv5hfAymriHLg0iAH9fElaU5YAsLjrTLh8hQmRA1"></script>
+
+    <script src="/bundles/eCanvasJsPubpic?v=x8AGFtn5toKW4LozUlfHWot8V2mqlU15eqVavhR6_XU1"></script>
+
+
+    <link href="/Content/canvasThemePublic?v=kXqWVTqybVuZeyanpYqEWiH0Zp2vB8lY_nA9SR92gbM1" rel="stylesheet">
+
+
+    <!-- Modernizr - leave this as the first package after the CSS -->
+    <script src="/bundles/modernizr"></script>
+
+
+
+
+
+    <!-- BEGIN LOGO -->
+    
+    <!-- ngIf: !adjustLogin --><div class="logo ng-scope" ng-if="!adjustLogin">
+        <a class="profile-userpic">
+            <img style="max-width: 190px" ng-show="showLogo" src="/api/fileblob/undefined" alt="" class="ng-hide">
+        </a>
+    </div><!-- end ngIf: !adjustLogin -->
+    <!-- END LOGO -->
+    <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+    <div class="menu-toggler sidebar-toggler">
+    </div>
+    <!-- END SIDEBAR TOGGLER BUTTON -->
+    <!-- BEGIN LOGIN -->
+    <div class="content" ng-style="adjustLogin &amp;&amp; {'margin-top':'13%','background-color':'rgba(128, 128, 128, 0.45)'}">
+        <!-- BEGIN LOGIN FORM -->
+        <form ng-show="!resetPassword" class="login-form ng-pristine ng-invalid ng-invalid-required" method="post" name="loginForm">
+            <h3 class="form-title">Login to your account</h3>
+            <div style="display: none" class="alert alert-danger" ng-class="{'showme':setError}">
+                <button class="close" data-close="alert"></button>
+                <span class="ng-binding">
+                    Enter username and password.
+                </span>
+            </div>
+            <div class="form-group">
+                <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                <label class="control-label visible-ie8 visible-ie9">Username</label>
+                <div class="input-icon">
+                    <i class="fa fa-user"></i>
+                    <input ng-keypress="loginWithEnterKey(event)" class="form-control placeholder-no-fix ng-pristine ng-invalid-required" ng-model="login.username" required="required" type="text" autocomplete="off" placeholder="Username" name="username">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9">Password</label>
+                <div class="input-icon">
+                    <i class="fa fa-lock"></i>
+                    <input ng-keypress="loginWithEnterKey(event)" class="form-control placeholder-no-fix ng-pristine ng-invalid-required" required="required" ng-model="login.password" type="password" autocomplete="off" placeholder="Password" name="password">
+                </div>
+            </div>
+            <div class="form-actions">
+                <label class="checkbox">
+                    <div class="checker">
+                        <span>
+                            <input type="checkbox" name="remember" value="true" ng-checked="login.remember==true" ng-click="rememberMe()" ng-model="login.remember" class="ng-pristine ng-valid">
+                        </span>
+                    </div>
+                    Remember me
+                </label>
+                <button ng-disabled="loggingIn" ng-click="login(login)" class="btn blue pull-right">
+                    Login <i ng-hide="loggingIn" class="m-icon-swapright m-icon-white"></i>
+                    <i ng-show="loggingIn" class="fa fa-spinner fa-spin  fa-fw margin-bottom ng-hide"></i>
+                </button>
+            </div>
+            
+            <div class="forget-password">
+                <h4>Forgot your password ?</h4>
+                <p>
+                    no worries, click <a href="javascript:;" ng-click="forgotPassword()" id="forget-password">
+                        here
+                    </a>
+                    to reset your password.
+                </p>
+            </div>
+
+        </form>
+
+        <form ng-show="resetPassword" style="display: " class="forget-form ng-pristine ng-valid ng-hide" novalidate="novalidate">
+            <h3>Forget Password ?</h3>
+            <div ng-show="status=='1'" class="ng-hide">
+                <p>
+                    Enter your e-mail address below to reset your password.
+                </p>
+            </div>
+
+            <div ng-show="status=='0'" class="">
+                <p>
+                    Enter your Admission No. and Mobile number below to reset your password.
+                </p>
+            </div>
+            <span ng-show="showPasswordResetMsg" class="ng-hide">
+                <div class="alert ng-isolate-scope alert-danger alert-dismissable" ng-class="['alert-' + (type || 'warning'), closeable ? 'alert-dismissable' : null]" role="alert" type="danger" close="closeAlert($index)">
+    <button ng-show="closeable" type="button" class="close" ng-click="close()">
+        <span aria-hidden="true">×</span>
+        <span class="sr-only">Close</span>
+    </button>
+    <div ng-transclude=""><span class="ng-scope ng-binding">
+                    
+                </span></div>
+</div>
+            </span>
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <input type="radio" ng-change="select(status)" ng-model="status" value="0" ng-value="0" name="vradio" class="ng-pristine ng-valid"><span style="color:white">Students</span>
+                </div>
+                <div class="col-md-6">
+
+                    <input type="radio" ng-change="select(status)" ng-model="status" value="1" ng-value="1" name="vradio" class="ng-pristine ng-valid"><span style="color:white">Others</span>
+                </div>
+            </div>
+            <div class="form-group ng-hide" ng-show="status=='1'">
+                <div class="input-icon">
+                    <i class="fa fa-envelope"></i>
+                    <input class="form-control placeholder-no-fix ng-pristine ng-valid" ng-model="forgetEmail" type="text" placeholder="Email/Username" name="email">
+                </div>
+            </div>
+
+            <div class="form-group" ng-show="status =='0'">
+                <div class="input-icon">
+                    <i class="fa fa-pencil-square-o"></i>
+                    <input class="form-control placeholder-no-fix ng-pristine ng-valid" ng-model="forgetAdmissionNumber" type="text" placeholder="Admission No." name="adm">
+                </div>
+            </div>
+            <div class="form-group" ng-show="status =='0'">
+                <div class="input-icon">
+                    <i class="fa fa-mobile"></i>
+                    <input class="form-control placeholder-no-fix ng-pristine ng-valid" ng-model="forgetPhoneNumber" type="text" placeholder="Mobile Number" name="phn">
+                </div>
+            </div>
+            <div class="form-actions">
+                <button ng-click="backToLogin()" type="button" id="back-btn" class="btn">
+                    <i class="m-icon-swapleft"></i>Back
+                </button>
+                <button ng-click="forgetpassword(forget)" type="button" class="btn blue pull-right">
+                    Submit <i ng-hide="pRest" class="m-icon-swapright m-icon-white"></i>
+                    <i ng-show="pRest" class="fa fa-spinner fa-spin  fa-fw margin-bottom ng-hide"></i>
+                </button>
+            </div>
+        </form>
+
+
+        <!-- END LOGIN -->
+        <!-- BEGIN COPYRIGHT -->
+        <div class="copyright">
+        </div>
+
+
+        
+        <span role="status" aria-live="polite" class="select2-hidden-accessible"></span>
+        <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 100%; width: 100%; z-index: -999999; position: fixed;">
+            <img src="" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 100%; height: 1015.85972369819px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -207.929861849097px;">
+        </div>
+
+
+
+
+     
+
+
+</div><div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 625px; width: 482px; z-index: -999999; position: fixed;"><img src="images/login/3.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 938.967px; height: 625px; max-height: none; max-width: none; z-index: -999999; left: -228.484px; top: 0px;"></div></body>
+
+     
+
+
+
+
+    
+
+</body>
+</html>
